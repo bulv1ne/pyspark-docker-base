@@ -24,4 +24,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ github.actor }}/pyspark-docker-base:latest
+          tags: ghcr.io/${{ github.actor }}/pyspark-docker-base:latest
