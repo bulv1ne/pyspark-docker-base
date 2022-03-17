@@ -25,5 +25,4 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     ln /usr/local/bin/python3.8 /usr/local/bin/python && \
     ln /usr/local/bin/python3.8 /usr/local/bin/python3 && \
-    python -m pip install --no-cache-dir -U pip && \
-    pip install --no-cache-dir poetry
+    python -m pip install --no-cache-dir -U pip poetry
