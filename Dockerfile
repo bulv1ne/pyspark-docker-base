@@ -1,5 +1,6 @@
 # Works for databricks instances running 9.1
 FROM openjdk:8-jdk-slim
+ARG PYTHON_VERSION=3.8.13
 
 # hadolint ignore=DL3008,DL3003,DL3013
 RUN apt-get update && \
@@ -16,9 +17,9 @@ RUN apt-get update && \
         libffi-dev \
         libbz2-dev  \
         curl && \
-    curl -O https://www.python.org/ftp/python/3.8.13/Python-3.8.13.tgz && \
-    tar xf Python-3.8.13.tgz && \
-    cd Python-3.8.13 && \
+    curl -O https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz && \
+    tar xf Python-$PYTHON_VERSION.tgz && \
+    cd Python-$PYTHON_VERSION && \
     ./configure --enable-optimizations --enable-loadable-sqlite-extensions && \
     make && \
     make altinstall && \
