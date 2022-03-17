@@ -16,9 +16,9 @@ RUN apt-get update && \
         libffi-dev \
         libbz2-dev  \
         curl && \
-    curl -O https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tgz && \
-    tar xf Python-3.8.12.tgz && \
-    cd Python-3.8.12 && \
+    curl -O https://www.python.org/ftp/python/3.8.13/Python-3.8.13.tgz && \
+    tar xf Python-3.8.13.tgz && \
+    cd Python-3.8.13 && \
     ./configure --enable-optimizations --enable-loadable-sqlite-extensions && \
     make && \
     make altinstall && \
