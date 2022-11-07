@@ -1,6 +1,6 @@
-# Works for databricks instances running 9.1
+# Works for databricks instances running 10.4
 FROM openjdk:8-jdk-slim
-ARG PYTHON_VERSION=3.8.13
+ARG PYTHON_VERSION=3.8.15
 
 # hadolint ignore=DL3008,DL3003,DL3013
 RUN apt-get update && \
