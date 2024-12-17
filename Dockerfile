@@ -1,7 +1,7 @@
 # Works for databricks instances running 15.4
 
 FROM openjdk:8-jdk-slim
-ARG PYTHON_VERSION=3.10.11
+ARG PYTHON_VERSION=3.10.12
 
 # hadolint ignore=DL3008,DL3003,DL3013
 RUN apt-get update && \
@@ -25,6 +25,6 @@ RUN apt-get update && \
     make && \
     make altinstall && \
     rm -rf /var/lib/apt/lists/* && \
-    ln /usr/local/bin/python3.8 /usr/local/bin/python && \
-    ln /usr/local/bin/python3.8 /usr/local/bin/python3 && \
+    ln /usr/local/bin/python3.10 /usr/local/bin/python && \
+    ln /usr/local/bin/python3.10 /usr/local/bin/python3 && \
     python -m pip install --no-cache-dir -U pip poetry
