@@ -1,4 +1,4 @@
-# Works for databricks instances running 10.4
+# Works for databricks instances running 15.4
 
 FROM openjdk:8-jdk-slim
 ARG PYTHON_VERSION=3.10.11
