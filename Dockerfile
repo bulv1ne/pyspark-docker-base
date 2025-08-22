@@ -16,7 +16,8 @@ RUN apt-get update && \
         libsqlite3-dev \
         libreadline-dev \
         libffi-dev \
-        libbz2-dev  \
+        libbz2-dev \
+        libtcl \
         curl && \
     curl -O https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz && \
     tar xf Python-$PYTHON_VERSION.tgz && \
